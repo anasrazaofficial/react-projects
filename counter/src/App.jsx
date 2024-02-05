@@ -47,8 +47,8 @@ function App() {
     <div className={`h-screen`} style={{ backgroundColor: theme, color: textColor }}>
 
       {/* Intro */}
-      <div className='center fade'>
-        <h1 className=''>Simple Couter App</h1>
+      <div className='center fade space-y-3 sm:space-y-5'>
+        <h1>Simple Couter App</h1>
         <p>A straightforward instrument for tallying items and maintaining numerical records.</p>
       </div>
 
