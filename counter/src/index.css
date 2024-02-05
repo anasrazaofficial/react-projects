@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@tailwind base;
+@tailwind components;
+
+body {
+    font-family: 'Marcellus', serif;
+}
+
+h1 {
+    @apply text-4xl sm:text-5xl xl:text-6xl
+}
+
+h2 {
+    @apply text-3xl sm:text-4xl xl:text-5xl
+}
+
+.center {
+    @apply absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+.fade {
+    animation: fade 5s ease-in-out forwards;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.display-content {
+    animation: displayContent 1s linear forwards;
+}
+
+@keyframes displayContent {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@tailwind utilities;
