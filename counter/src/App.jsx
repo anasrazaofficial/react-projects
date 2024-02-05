@@ -22,16 +22,13 @@ function App() {
 
   useEffect(() => {
     if (initialRender.current) {
-      setTimeout(() => {
-        setMain(true)
-      }, 5000);
+      setTimeout(() => setMain(true), 5000);
       initialRender.current = false
     }
   }, [])
 
 
   const toggleModal = (modal, toggler) => {
-    console.log(document.querySelector('main')?.classList.remove("display-content"));
     if (toggler) {
       modal.showModal()
       setMain(false)
