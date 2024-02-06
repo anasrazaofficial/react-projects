@@ -7,6 +7,7 @@ import App from './App.jsx'
 import Counter from './Pages/Counter.jsx'
 import Index from './Pages/Index.jsx'
 import BackgroundChanger from './Pages/Background-Changer.jsx'
+import PasswordGenerator from './Pages/Password-Generator.jsx'
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +15,7 @@ const routes = createBrowserRouter(
       <Route path='' element={<Index />} />
       <Route path='counter' element={<Counter />} />
       <Route path='backgroundChanger' element={<BackgroundChanger />} />
+      <Route path='passwordGenerator' element={<PasswordGenerator />} />
     </Route>
   )
 )
