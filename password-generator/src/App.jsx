@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import './index.css'
+import regenImg from './Assets/reset.svg'
 
 function App() {
   let [num, setNum] = useState(false)
@@ -25,30 +26,30 @@ function App() {
   let copyPassword = () => {
     console.log(passwordRef);
     passwordRef.current?.select();
-    // passwordRef.current?.setSelectionRange(0, 1)
     window.navigator.clipboard.writeText(password)
   }
 
   return (
     <div className='w-screen h-screen bg-gray-700 text-white py-3'>
       <h1 className='text-center text-4xl font-semibold'>Password Generator</h1>
-      <div className='bg-[#8d8d8d] flex flex-col items-center w-fit mx-auto p-4 rounded-md mt-2 space-y-2'>
-        <div className=''>
-          <input type="text" className='outline-none text-black rounded-l-md px-3 py-1' defaultValue={password} ref={passwordRef} readOnly />
+      <div className='bg-[#8d8d8d] w-fit mx-auto p-4 rounded-md mt-2 space-y-2'>
+        <div className='flex items-center'>
+          <input type="text" className='outline-none text-black rounded-l-md px-3 py-1 w-full' defaultValue={password} ref={passwordRef} readOnly />
           <button className='bg-blue-400 rounded-r-md px-3 py-1 cursor-pointer hover:bg-blue-500' onClick={copyPassword}>Copy</button>
+          <button className='pl-2' onClick={generatePassword}><img src={regenImg} alt="" /></button>
         </div>
-        <div className='flex space-x-5'>
-          <span className='flex space-x-2'>
-            <input type="range" min={8} max={20} onChange={(e) => setLength(() => e.target.value)} defaultValue={length} />
+        <div className='flex gap-2 sm:gap-4 flex-col sm:flex-row'>
+          <span className='flex items-center gap-2'>
             <label>Length: {length}</label>
+            <input type="range" min={8} max={20} onChange={(e) => setLength(() => e.target.value)} defaultValue={length} />
           </span>
-          <span className='flex space-x-2'>
-            <label>Numbers</label>
-            <input type="checkbox" defaultChecked={num} onChange={() => setNum(prev => !prev)} />
+          <span className='flex items-center gap-2'>
+            <label htmlFor='numbers'>Numbers</label>
+            <input type="checkbox" id='numbers' name='numbers' defaultChecked={num} onChange={() => setNum(prev => !prev)} />
           </span>
-          <span className='flex space-x-2'>
-            <label>Characters</label>
-            <input type="checkbox" defaultChecked={char} onChange={() => setChar(prev => !prev)} />
+          <span className='flex items-center gap-2'>
+            <label htmlFor='characters'>Characters</label>
+            <input type="checkbox" id='characters' name='characters' defaultChecked={char} onChange={() => setChar(prev => !prev)} />
           </span>
         </div>
       </div>
