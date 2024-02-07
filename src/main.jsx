@@ -9,6 +9,7 @@ import Index from './Pages/Index.jsx'
 import BackgroundChanger from './Pages/Background-Changer.jsx'
 import PasswordGenerator from './Pages/Password-Generator.jsx'
 import CurrencyConverter from './Pages/Currency-Converter.jsx'
+import ModeToggler from './Pages/Mode-Toggler.jsx'
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const routes = createBrowserRouter(
       <Route path='backgroundChanger' element={<BackgroundChanger />} />
       <Route path='passwordGenerator' element={<PasswordGenerator />} />
       <Route path='currencyConverter' element={<CurrencyConverter />} />
+      <Route path='modeToggler' element={<ModeToggler />} />
     </Route>
   )
 )
