@@ -1,15 +1,16 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../index.css";
 import InputBox from "../components/InputBox";
 import useCurrencyInfo from "../hooks/useCurrencyInfo"
 import bg from '../Assets/bg-cur-con.jpeg'
 
 function CurrencyConverter() {
-
+  const [main, setMain] = useState(false)
   const [amount, setAmount] = useState('')
   const [from, setFrom] = useState('usd')
   const [to, setTo] = useState('pkr')
   const [convertedAmount, setConvertedAmount] = useState('')
+  const initialRender = useRef(true)
 
   const currencyInfo = useCurrencyInfo(from)
   const options = Object.keys(currencyInfo)
@@ -21,13 +22,26 @@ function CurrencyConverter() {
     setAmount(convertedAmount)
   }
 
+  useEffect(() => {
+    if (initialRender.current) {
+      setTimeout(() => setMain(true), 7000);
+      initialRender.current = false
+    }
+  }, [])
+
   const convert = () => setConvertedAmount(Number(amount * currencyInfo[to]).toFixed(2))
 
   return (
-    <div className="w-full h-screen flex flex-wrap justify-center items-center bg-gray-700" style={{
-      backgroundImage: `url('${bg}')`,
-    }}>
-      <div className="w-full">
+    <div>
+
+      <div className='center fade space-y-2 sm:space-y-3'>
+        <h1 className="text-center">Currency Converter</h1>
+        <p>A versatile tool enabling seamless conversion of monetary values between different currencies, facilitating easy comparison and transactions in global markets.</p>
+      </div>
+
+      {main && <div className="w-full h-screen flex flex-wrap justify-center items-center bg-gray-700" style={{
+        backgroundImage: `url('${bg}')`,
+      }}>
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
           <form onSubmit={(e) => {
             e.preventDefault()
@@ -49,7 +63,8 @@ function CurrencyConverter() {
             </button>
           </form>
         </div>
-      </div>
+      </div>}
+
     </div>
   )
 }

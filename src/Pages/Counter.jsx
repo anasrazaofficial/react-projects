@@ -22,7 +22,7 @@ function Counter() {
 
   useEffect(() => {
     if (initialRender.current) {
-      setTimeout(() => setMain(true), 5000);
+      setTimeout(() => setMain(true), 7000);
       initialRender.current = false
     }
   }, [])
@@ -48,12 +48,12 @@ function Counter() {
 
       {/* Intro */}
       <div className='center fade space-y-2 sm:space-y-3'>
-        <h1>Simple Couter App</h1>
+        <h1 className='text-center'>Simple Couter App</h1>
         <p>A straightforward instrument for tallying items and maintaining numerical records.</p>
       </div>
 
 
-      {main && <main className='display-content'>
+      {main && <main>
 
         {/* Accessibility */}
         <section className='absolute top-4 left-1/2 -translate-x-1/2 flex gap-x-4'>

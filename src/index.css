@@ -23,7 +23,7 @@ h3 {
 }
 
 .fade {
-    animation: fade 5s ease-in-out forwards;
+    animation: fade 7s ease-in-out forwards;
 }
 
 @keyframes fade {
@@ -31,26 +31,16 @@ h3 {
         opacity: 0;
     }
 
-    50% {
+    20% {
+        opacity: 1;
+    }
+
+    80% {
         opacity: 1;
     }
 
     100% {
         opacity: 0;
-    }
-}
-
-.display-content {
-    animation: displayContent 1s linear forwards;
-}
-
-@keyframes displayContent {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
     }
 }
 
