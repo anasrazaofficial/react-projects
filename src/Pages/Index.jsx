@@ -12,7 +12,8 @@ const Index = () => {
     return (
         <div className='bg-no-repeat bg-cover pb-3' style={{ backgroundImage: `url(${background})` }}>
             <h1 className='text-center py-3'>MultiTool Pro</h1>
-            <section className='grid sm:grid-cols-3 xl:grid-cols-4 px-2 sm:px-4 gap-2 sm:gap-4'>
+
+            <section className='grid sm:grid-cols-3 xl:grid-cols-4 px-2 sm:px-4 gap-2 sm:gap-4 mt-3 sm:mt-5'>
 
                 <div className='p-1 sm:p-3 shadow-md rounded bg-[#ffffff77] backdrop-blur-sm space-y-3'>
                     <img src={counter} alt="Counter" title='Counter' />
