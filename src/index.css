@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 @tailwind base;
 @tailwind components;
 
 body {
-    font-family: 'Marcellus', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-    @apply text-3xl sm:text-4xl xl:text-5xl
+    @apply text-2xl sm:text-3xl xl:text-4xl font-bold
 }
 
 h2 {
-    @apply text-2xl sm:text-3xl xl:text-4xl
+    @apply text-xl sm:text-2xl xl:text-3xl font-bold
 }
 
 h3 {
-    @apply text-xl sm:text-2xl xl:text-3xl
+    @apply text-lg sm:text-xl xl:text-2xl font-bold
 }
 
 .center {
