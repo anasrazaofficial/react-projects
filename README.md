@@ -31,7 +31,7 @@ This repository contains a collection of small React projects developed by Syed 
 - **LinkedIn:** [Syed Anas Raza on LinkedIn](https://www.linkedin.com/in/syedanasraza)
 
 ## Preview:
-You can see the preview [here](https://multitool-pro.vercel.app/)
+You can see the preview [here](https://multitoolpro.vercel.app/)
 
 # Installation and Execution:
 - Run `npm install` to install all the packages
