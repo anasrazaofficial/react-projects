@@ -8,7 +8,6 @@ function PasswordGenerator() {
   let [password, setPassword] = useState("")
   let [length, setLength] = useState(8)
   let passwordRef = useRef(null)
-  const initialRender = useRef(true)
 
   
   let generatePassword = useCallback(() => {

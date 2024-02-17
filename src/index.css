@@ -29,6 +29,9 @@ h3 {
 .fadeIn {
     animation: fadeIn 8s ease-in-out forwards;
 }
+.fadeToggle {
+    animation: fadeToggle 8s ease-in-out forwards;
+}
 
 @keyframes fade {
     0% {
@@ -51,15 +54,28 @@ h3 {
 
 @keyframes fadeIn {
     0% {
-        opacity: 0;
+        display: none;
     }
 
-    80% {
-        opacity: 0;
+    85% {
+        display: none;
     }
 
     100% {
-        opacity: 1;
+        display: block;
+    }
+}
+@keyframes fadeToggle {
+    0% {
+        display: none;
+    }
+
+    85% {
+        display: none;
+    }
+
+    100% {
+        display: flex;
     }
 }
 

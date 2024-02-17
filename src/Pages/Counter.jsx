@@ -1,5 +1,5 @@
 import '../index.css'
-import { useEffect, useRef, useState } from 'react'
+import { useState } from 'react'
 
 import reset from '../Assets/reset.svg'
 import info from '../Assets/info.svg'
@@ -13,19 +13,10 @@ import close from '../Assets/close.svg'
 
 
 function Counter() {
-  const [main, setMain] = useState(false)
   const [counter, setCounter] = useState(0)
   const [limit, setLimit] = useState('')
   const [theme, setTheme] = useState('#242526')
   const [textColor, setTextColor] = useState('white')
-  const initialRender = useRef(true)
-
-  useEffect(() => {
-    if (initialRender.current) {
-      setTimeout(() => setMain(true), 7000);
-      initialRender.current = false
-    }
-  }, [])
 
 
   const toggleModal = (modal, toggler) => {
@@ -53,7 +44,7 @@ function Counter() {
       </div>
 
 
-      {main && <main>
+      <main className='fadeIn'>
 
         {/* Accessibility */}
         <section className='absolute top-4 left-1/2 -translate-x-1/2 flex gap-x-4'>
@@ -81,7 +72,7 @@ function Counter() {
           <span className='hidden sm:inline'>=</span>
           <span>{limit - counter}</span>
         </h2>}
-      </main>}
+      </main>
 
 
       {/* Info Dialog */}
