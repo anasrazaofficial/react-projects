@@ -27,7 +27,7 @@ This repository contains a collection of small React projects developed by Syed 
 ## Developer Information:
 
 - **Developer:** Syed Anas Raza
-- **Portfolio:** [Discover Anas Portfolio](https://discover-anas.vercel.app/)
+- **Portfolio:** [Discover Anas Portfolio](https://discoveranas.vercel.app/)
 - **LinkedIn:** [Syed Anas Raza on LinkedIn](https://www.linkedin.com/in/syedanasraza)
 
 ## Preview:
