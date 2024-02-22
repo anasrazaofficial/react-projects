@@ -76,7 +76,7 @@ export const Counter = () => {
 
 
       {/* Info Dialog */}
-      <dialog id='infoModal' className={`center w-full p-5 mx-2 sm:mx-0 sm:p-20 sm:w-fit bg-transparent`} style={{ boxShadow: '0px 1px 10px -6px #ffffff5e', color: textColor }}>
+      <dialog id='infoModal' className={`center w-full p-5 mx-2 sm:mx-0 sm:p-20 sm:w-fit bg-inherit`} style={{ boxShadow: '0px 1px 10px -6px #ffffff5e', color: textColor }}>
         <img src={close} alt="" className='absolute top-2 right-5 cursor-pointer' onClick={() => toggleModal(infoModal, false)} />
         <h1 className='sm:text-nowrap text-center'>Simple Couter App</h1>
         <p className='sm:text-nowrap mt-2 sm:mt-3'>A straightforward instrument for tallying items and maintaining numerical records.</p>
@@ -93,7 +93,7 @@ export const Counter = () => {
 
 
       {/* Settings Dialog */}
-      <dialog id='settingsModal' className={`center w-full p-5 mx-2 sm:mx-0 sm:p-20 sm:w-fit bg-transparent`} style={{ boxShadow: '0px 1px 10px -6px #ffffff5e', color: textColor }}>
+      <dialog id='settingsModal' className={`center w-full p-5 mx-2 sm:mx-0 sm:p-20 sm:w-fit bg-inherit`} style={{ boxShadow: '0px 1px 10px -6px #ffffff5e', color: textColor }}>
         <img src={close} alt="" className='absolute top-2 right-5 cursor-pointer' onClick={() => toggleModal(settingsModal, false)} />
         <h1 className='sm:text-nowrap text-center'>Settings</h1>
         <div className='mt-3 sm:mt-5'>
