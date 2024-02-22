@@ -3,7 +3,7 @@ import ThemeBtn from '../components/ThemeBtn'
 import Card from '../components/Card'
 import { ThemeProvider } from '../contexts/ThemeContext'
 
-function ModeToggler() {
+export const ModeToggler = () => {
   const [theme, setTheme] = useState('light')
 
   const lightMode = () => {
@@ -42,5 +42,3 @@ function ModeToggler() {
     </ThemeProvider>
   )
 }
-
-export default ModeToggler

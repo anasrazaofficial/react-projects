@@ -8,12 +8,13 @@ import passwordGenerator from '../Assets/Tools/password-generator.gif'
 import currencyConverter from '../Assets/Tools/currency-converter.gif'
 import darkmodeToggler from '../Assets/Tools/darkmode.gif'
 import todo from '../Assets/Tools/todo.gif'
+import weather from '../Assets/Tools/weather.gif'
 
 import github from '../Assets/github.svg'
 import email from '../Assets/email.svg'
 import linkedin from '../Assets/linkedin.svg'
 
-const Index = () => {
+export const Index = () => {
     return (
         <div className='bg-cover bg-[#06131b80] bg-blend-multiply' style={{ backgroundImage: `url(${background})` }}>
             <h1 className='text-center py-3 bg-[#06131b99] text-white'>MULTITOOL PRO</h1>
@@ -25,7 +26,7 @@ const Index = () => {
                     <img src={counter} alt="Counter" title='Counter' className='rounded-md' />
                     <div className='space-y-3'>
                         <h3>Counter</h3>
-                        <p className='line-clamp-3 hover:line-clamp-none'>A straightforward instrument for tallying items and maintaining numerical records.</p>
+                        <p className='sm:line-clamp-3 hover:line-clamp-none'>A straightforward instrument for tallying items and maintaining numerical records.</p>
                         <Link to='counter' className='bg-[#06131b] text-white px-3 py-1 rounded-md hover:bg-[#06131b99] transition-colors inline-block'>Go to App</Link>
                     </div>
                 </div>
@@ -35,7 +36,7 @@ const Index = () => {
                     <img src={bgChanger} alt="Background changer" title='Background changer' className='rounded-md' />
                     <div className='space-y-3'>
                         <h3>Background Changer</h3>
-                        <p className='line-clamp-3 hover:line-clamp-none'>An application designed to dynamically alter the background color of a user interface according to specified preferences.</p>
+                        <p className='sm:line-clamp-3 hover:line-clamp-none'>An application designed to dynamically alter the background color of a user interface according to specified preferences.</p>
                         <Link to='backgroundChanger' className='bg-[#06131b] text-white px-3 py-1 rounded-md hover:bg-[#06131b99] transition-colors inline-block'>Go to App</Link>
                     </div>
                 </div>
@@ -45,7 +46,7 @@ const Index = () => {
                     <img src={passwordGenerator} alt="Password Generator" title='Password Generator' className='rounded-md' />
                     <div className='space-y-3'>
                         <h3>Password Generator</h3>
-                        <p className='line-clamp-3 hover:line-clamp-none'>A robust tool designed to generate strong, randomized passwords tailored to your specifications.</p>
+                        <p className='sm:line-clamp-3 hover:line-clamp-none'>A robust tool designed to generate strong, randomized passwords tailored to your specifications.</p>
                         <Link to='passwordGenerator' className='bg-[#06131b] text-white px-3 py-1 rounded-md hover:bg-[#06131b99] transition-colors inline-block'>Go to App</Link>
                     </div>
                 </div>
@@ -55,7 +56,7 @@ const Index = () => {
                     <img src={currencyConverter} alt="Currency Converter" title='Currency Converter' className='rounded-md' />
                     <div className='space-y-3'>
                         <h3>Currency Converter</h3>
-                        <p className='line-clamp-3 hover:line-clamp-none'>A versatile tool enabling seamless conversion of monetary values between different currencies, facilitating easy comparison and transactions in global markets.</p>
+                        <p className='sm:line-clamp-3 hover:line-clamp-none'>A versatile tool enabling seamless conversion of monetary values between different currencies, facilitating easy comparison and transactions in global markets.</p>
                         <Link to='currencyConverter' className='bg-[#06131b] text-white px-3 py-1 rounded-md hover:bg-[#06131b99] transition-colors inline-block'>Go to App</Link>
                     </div>
                 </div>
@@ -65,18 +66,28 @@ const Index = () => {
                     <img src={darkmodeToggler} alt="Dark Mode Toggler" title='Dark Mode Toggler' className='rounded-md' />
                     <div className='space-y-3'>
                         <h3>Dark Mode Toggler</h3>
-                        <p className='line-clamp-3 hover:line-clamp-none'>Easily switch between light and dark modes with our intuitive Dark Mode Toggler app, enhancing readability and reducing eye strain at your fingertips.</p>
+                        <p className='sm:line-clamp-3 hover:line-clamp-none'>Easily switch between light and dark modes with our intuitive Dark Mode Toggler app, enhancing readability and reducing eye strain at your fingertips.</p>
                         <Link to='modeToggler' className='bg-[#06131b] text-white px-3 py-1 rounded-md hover:bg-[#06131b99] transition-colors inline-block'>Go to App</Link>
                     </div>
                 </div>
 
                 <div className='p-3 md:p-5 rounded-md bg-[#ffffff33] text-white backdrop-blur-sm space-y-3'
                     style={{ boxShadow: '0 10px 40px -10px black' }}>
-                    <img src={todo} alt="Dark Mode Toggler" title='Dark Mode Toggler' className='rounded-md' />
+                    <img src={todo} alt="Todo List" title='Todo List' className='rounded-md' />
                     <div className='space-y-3'>
                         <h3>Todo List</h3>
-                        <p className='line-clamp-3 hover:line-clamp-none'>An app that keeps track of your tasks effortlessly with our intuitive to-do list. Organize your day and boost productivity with ease.</p>
+                        <p className='sm:line-clamp-3 hover:line-clamp-none'>An app that keeps track of your tasks effortlessly with our intuitive to-do list. Organize your day and boost productivity with ease.</p>
                         <Link to='todo' className='bg-[#06131b] text-white px-3 py-1 rounded-md hover:bg-[#06131b99] transition-colors inline-block'>Go to App</Link>
+                    </div>
+                </div>
+
+                <div className='p-3 md:p-5 rounded-md bg-[#ffffff33] text-white backdrop-blur-sm space-y-3'
+                    style={{ boxShadow: '0 10px 40px -10px black' }}>
+                    <img src={weather} alt="Weather App" title='Weather App' className='rounded-md' />
+                    <div className='space-y-3'>
+                        <h3>Weather App</h3>
+                        <p className='sm:line-clamp-3 hover:line-clamp-none'>Start your day right with our innovative app, offering precise weather forecasts for cities worldwide, ensuring you're never caught off guard by the elements.</p>
+                        <Link to='weather' className='bg-[#06131b] text-white px-3 py-1 rounded-md hover:bg-[#06131b99] transition-colors inline-block'>Go to App</Link>
                     </div>
                 </div>
 
@@ -93,5 +104,3 @@ const Index = () => {
         </div>
     )
 }
-
-export default Index

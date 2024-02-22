@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import deleteBtn from '../Assets/delete.svg'
 import updateBtn from '../Assets/upate.svg'
 
-const Todo = () => {
+export const Todo = () => {
   const [todoMsg, setTodoMsg] = useState('')
   const [todos, setTodos] = useState([])
   const [id, setId] = useState(1)
@@ -115,5 +115,3 @@ const Todo = () => {
     </div>
   )
 }
-
-export default Todo

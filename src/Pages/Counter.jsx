@@ -12,7 +12,7 @@ import github from '../Assets/github.svg'
 import close from '../Assets/close.svg'
 
 
-function Counter() {
+export const Counter = () => {
   const [counter, setCounter] = useState(0)
   const [limit, setLimit] = useState('')
   const [theme, setTheme] = useState('#242526')
@@ -129,5 +129,3 @@ function Counter() {
     </div >
   )
 }
-
-export default Counter

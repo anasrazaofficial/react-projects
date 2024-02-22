@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "../index.css"
 
-function BackgroundChanger() {
+export const BackgroundChanger = () => {
   const [color, setColor] = useState('white')
 
   return (
@@ -24,5 +24,3 @@ function BackgroundChanger() {
     </div>
   )
 }
-
-export default BackgroundChanger

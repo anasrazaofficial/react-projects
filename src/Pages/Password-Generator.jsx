@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import '../index.css'
 import regenImg from '../Assets/reset.svg'
 
-function PasswordGenerator() {
+export const PasswordGenerator = () => {
   let [num, setNum] = useState(false)
   let [char, setChar] = useState(false)
   let [password, setPassword] = useState("")
@@ -66,5 +66,3 @@ function PasswordGenerator() {
     </div>
   )
 }
-
-export default PasswordGenerator

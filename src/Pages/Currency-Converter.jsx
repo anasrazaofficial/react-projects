@@ -4,7 +4,7 @@ import InputBox from "../components/InputBox";
 import useCurrencyInfo from "../hooks/useCurrencyInfo"
 import bg from '../Assets/background.jpg'
 
-function CurrencyConverter() {
+export const CurrencyConverter = () => {
   const [amount, setAmount] = useState('')
   const [from, setFrom] = useState('usd')
   const [to, setTo] = useState('pkr')
@@ -59,4 +59,3 @@ function CurrencyConverter() {
     </div>
   )
 }
-export default CurrencyConverter
