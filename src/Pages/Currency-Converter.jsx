@@ -30,7 +30,7 @@ export const CurrencyConverter = () => {
         <p>A versatile tool enabling seamless conversion of monetary values between different currencies, facilitating easy comparison and transactions in global markets.</p>
       </div>
 
-      <div className="w-full h-screen flex flex-wrap justify-center items-center bg-gray-700 bg-cover fadeIn" style={{
+      <div className="w-full h-screen flex flex-wrap justify-center items-center bg-gray-700 bg-cover fadeCurCnvrtr" style={{
         backgroundImage: `url('${bg}')`,
       }}>
         <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">

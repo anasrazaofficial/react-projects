@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react'
-import clearImg from '../Assets/sunny2.svg'
+import clearImg from '../Assets/sunny.svg'
 import cloudyImg from '../Assets/cloudy.svg'
 import rainyImg from '../Assets/rainy.svg'
 import foggyImg from '../Assets/foggy.svg'
@@ -22,6 +22,7 @@ export const Weather = () => {
     const [humidity, setHumidity] = useState(null)
     const [feelLike, setFeelLike] = useState(null)
     const [pressure, setPressure] = useState(null)
+    const [location, setLocation] = useState("")
     const [bg, setBg] = useState('bg-white')
     const [image, setImage] = useState(null)
     const [textColor, setTextColor] = useState('black')
@@ -41,47 +42,34 @@ export const Weather = () => {
                     setHumidity(res.main.humidity)
                     setFeelLike(res.main.feels_like)
                     setPressure(res.main.pressure)
+                    setLocation(`${res.name}, ${res?.sys?.country}`)
 
                     //Checking weather for theme
-                    switch (res.weather[0].main.toLowerCase()) {
-                        case 'clear':
-                            setBg(clear)
-                            setImage(clearImg)
-                            setTextColor('black')
-                            break;
-
-                        case 'clouds':
-                            setBg(cloudy)
-                            setImage(cloudyImg)
-                            setTextColor('black')
-                            break;
-
-                        case 'rainy':
-                            setBg(rainy)
-                            setImage(rainyImg)
-                            setTextColor('white')
-                            break;
-
-                        case 'foggy':
-                            setBg(foggy)
-                            setImage(foggyImg)
-                            setTextColor('black')
-                            break;
-
-                        case 'storm':
-                            setBg(storm)
-                            setImage(stormImg)
-                            setTextColor('black')
-                            break;
-
-                        case 'snowy':
-                            setBg(snowy)
-                            setImage(snowyImg)
-                            setTextColor('white')
-                            break;
-
-                        default:
-                            break;
+                    let weatherType = res.weather[0].main.toLowerCase()
+                    if (weatherType == 'clear') {
+                        setBg(clear)
+                        setImage(clearImg)
+                        setTextColor('black')
+                    } else if (weatherType == 'clouds') {
+                        setBg(cloudy)
+                        setImage(cloudyImg)
+                        setTextColor('black')
+                    } else if (weatherType == 'rainy') {
+                        setBg(rainy)
+                        setImage(rainyImg)
+                        setTextColor('white')
+                    } else if (weatherType == 'haze' || weatherType == 'foggy') {
+                        setBg(foggy)
+                        setImage(foggyImg)
+                        setTextColor('black')
+                    } else if (weatherType == 'storm') {
+                        setBg(storm)
+                        setImage(stormImg)
+                        setTextColor('black')
+                    } else if (weatherType == 'snowy') {
+                        setBg(snowy)
+                        setImage(snowyImg)
+                        setTextColor('white')
                     }
                 } else alert(res.message)
             }).catch(err => console.error(err))
@@ -98,7 +86,7 @@ export const Weather = () => {
             </div>
 
             {/* Main */}
-            <main className='px-4 md:px-6 xl:px-72 py-3 space-y-3 md:space-y-5 sm:w-4/5 md:w-3/4 xl:w-[1440px] mx-auto fadeIn'>
+            <main className='px-4 md:px-6 xl:px-72 pt-10 pb-3 space-y-3 md:space-y-5 sm:w-4/5 md:w-3/4 xl:w-[1440px] mx-auto fadeIn'>
                 <h1 className={`text-center text-${textColor}`}>Weather App</h1>
 
                 {/* Search for City */}
@@ -115,7 +103,7 @@ export const Weather = () => {
                     <div className='grid gap-4 grid-cols-2 xl:grid-cols-3'>
                         <div className='bg-[#ffffff52] px-3 py-4 md:p-6 rounded-md col-span-2' style={{ boxShadow: '0px 1px 4px #0000002e' }}>
                             <h1 className={`text-${textColor} text-[40px] md:text-5xl leading-none`}>{temp}°C</h1>
-                            <p className={`text-${textColor} text-xs md:text-base`}>Karachi, Pakistan</p>
+                            <p className={`text-${textColor} text-xs md:text-base`}>{location}</p>
                         </div>
 
                         <div className='bg-[#ffffff52] px-3 py-4 md:p-6 rounded-md' style={{ boxShadow: '0px 1px 4px #0000002e' }}>

@@ -29,8 +29,8 @@ h3 {
 .fadeIn {
     animation: fadeIn 8s ease-in-out forwards;
 }
-.fadeToggle {
-    animation: fadeToggle 8s ease-in-out forwards;
+.fadeCurCnvrtr {
+    animation: fadeCurCnvrtr 8s ease-in-out forwards;
 }
 
 @keyframes fade {
@@ -65,7 +65,7 @@ h3 {
         display: block;
     }
 }
-@keyframes fadeToggle {
+@keyframes fadeCurCnvrtr {
     0% {
         display: none;
     }
