@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       {/* Intro */}
-      {/* <div className='center fade space-y-2 sm:space-y-3'>
+      {/* <div className='center fade space-y-2 md:space-y-3'>
         <h1 className="text-center">Weather App</h1>
         <p>Start your day right with our innovative app, offering precise weather forecasts for cities worldwide, ensuring you're never caught off guard by the elements.</p>
       </div> */}
@@ -24,7 +24,7 @@ const App = () => {
                 <h3 className='text-lg uppercase'>Todo</h3>
                 <span className='text-gray-500 text-xs'> - 3 items</span>
               </div>
-              <button>Add</button>
+              <button className='text-3xl bg-gray-100 hover:bg-gray-200 cursor-pointer px-3 pb-1 rounded-full'>+</button>
             </div>
             <div className='space-y-3 overflow-y-auto h-tms'>
               <div className='bg-gray-100 py-4 px-6 rounded-sm space-y-2'>
@@ -50,7 +50,7 @@ const App = () => {
                 <h3 className='text-lg uppercase'>Progress</h3>
                 <span className='text-gray-500 text-xs'> - 3 items</span>
               </div>
-              <button>Add</button>
+              <button className='text-3xl bg-gray-100 hover:bg-gray-200 cursor-pointer px-3 pb-1 rounded-full'>+</button>
             </div>
             <div className='space-y-3 overflow-y-auto h-tms'>
               <div className='bg-gray-100 py-4 px-6 rounded-sm space-y-2'>
@@ -77,7 +77,7 @@ const App = () => {
                 <h3 className='text-lg uppercase'>Blocked</h3>
                 <span className='text-gray-500 text-xs'> - 3 items</span>
               </div>
-              <button>Add</button>
+              <button className='text-3xl bg-gray-100 hover:bg-gray-200 cursor-pointer px-3 pb-1 rounded-full'>+</button>
             </div>
             <div className='space-y-3 overflow-y-auto h-tms'>
               <div className='bg-gray-100 py-4 px-6 rounded-sm space-y-2'>
@@ -104,7 +104,7 @@ const App = () => {
                 <h3 className='text-lg uppercase'>Completed</h3>
                 <span className='text-gray-500 text-xs'> - 3 items</span>
               </div>
-              <button>Add</button>
+              <button className='text-3xl bg-gray-100 hover:bg-gray-200 cursor-pointer px-3 pb-1 rounded-full'>+</button>
             </div>
             <div className='space-y-3 overflow-y-auto h-tms'>
               <div className='bg-gray-100 py-4 px-6 rounded-sm space-y-2'>

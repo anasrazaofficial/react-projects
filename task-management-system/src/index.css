@@ -7,15 +7,15 @@ body {
 }
 
 h1 {
-    @apply text-2xl sm:text-3xl xl:text-4xl font-bold
+    @apply text-2xl md:text-3xl xl:text-4xl font-bold
 }
 
 h2 {
-    @apply text-xl sm:text-2xl xl:text-3xl font-bold
+    @apply text-xl md:text-2xl xl:text-3xl font-bold
 }
 
 h3 {
-    @apply text-lg sm:text-xl xl:text-2xl font-bold
+    @apply text-lg md:text-xl xl:text-2xl font-bold
 }
 
 .center {
@@ -35,23 +35,17 @@ h3 {
 }
 
 .h-tms {
-    height: calc(100vh - 112px);
-}
-
-@media (min-width:640px) {
-    .h-tms {
-        height: calc(100vh - 116px);
-    }
+    height: calc(100vh - 124px);
 }
 
 @media (min-width:768px) {
     .h-tms {
-        height: calc(100vh - 144px);
+        height: calc(100vh - 156px);
     }
 }
 @media (min-width:1440px) {
     .h-tms {
-        height: calc(100vh - 148px);
+        height: calc(100vh - 160px);
     }
 }
 
