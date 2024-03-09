@@ -54,11 +54,11 @@ export const Weather = () => {
                         setBg(cloudy)
                         setImage(cloudyImg)
                         setTextColor('black')
-                    } else if (weatherType == 'rainy') {
+                    } else if (weatherType == 'rain') {
                         setBg(rainy)
                         setImage(rainyImg)
                         setTextColor('white')
-                    } else if (weatherType == 'haze' || weatherType == 'foggy') {
+                    } else if (weatherType == 'haze' || weatherType == 'fog'|| weatherType == 'smoke') {
                         setBg(foggy)
                         setImage(foggyImg)
                         setTextColor('black')
@@ -66,7 +66,7 @@ export const Weather = () => {
                         setBg(storm)
                         setImage(stormImg)
                         setTextColor('black')
-                    } else if (weatherType == 'snowy') {
+                    } else if (weatherType == 'snow') {
                         setBg(snowy)
                         setImage(snowyImg)
                         setTextColor('white')
