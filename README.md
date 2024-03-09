@@ -24,6 +24,14 @@ This repository contains a collection of small React projects developed by Syed 
    - Description: A simple toggle button that allows users to switch between dark and light modes. It provides a visually pleasing way to toggle the appearance of the application.
    - Code: [Dark Mode Toggler Demo](./src/Pages/Mode-Toggler.jsx)
   
+6. **Todo List**
+   - Description: A dynamic todo list with filtering functionality, enabling users to effortlessly switch between viewing completed, incomplete, and all tasks. Simplify your task management experience with ease.
+   - Code: [Todo List Demo](./src/Pages/Todo.jsx)
+  
+7. **Weather App**
+   - Description: A user-friendly weather application providing real-time weather updates and forecasts. Seamlessly toggle between current conditions and extended forecasts for comprehensive weather insights.
+   - Code: [Weather App Demo](./src/Pages/Weather.jsx)
+  
 ## Developer Information:
 
 - **Developer:** Syed Anas Raza
