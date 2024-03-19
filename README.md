@@ -31,6 +31,10 @@ This repository contains a collection of small React projects developed by Syed 
 7. **Weather App**
    - Description: A user-friendly weather application providing real-time weather updates and forecasts. Seamlessly toggle between current conditions and extended forecasts for comprehensive weather insights.
    - Code: [Weather App Demo](./src/Pages/Weather.jsx)
+
+8. **Weather App**
+   - Description: Welcome to the classic game of Rock, Paper, Scissors! In this timeless contest of wits and strategy, you'll face off against the computer in a battle of hand gestures.
+   - Code: [Rock Paper Scissors Demo](./src/Pages/RPS.jsx)
   
 ## Developer Information:
 
