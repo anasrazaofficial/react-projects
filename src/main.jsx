@@ -4,19 +4,21 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 
 import './index.css'
 import App from './App.jsx'
-import { Index, Counter, CurrencyConverter, BackgroundChanger, ModeToggler, PasswordGenerator, Todo, Weather } from './Pages/index.js'
+import { Index, Counter, CurrencyConverter, BackgroundChanger, ModeToggler, PasswordGenerator, Todo, Weather, RPS } from './Pages/index.js'
+
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App />}>
       <Route path='' element={<Index />} />
       <Route path='counter' element={<Counter />} />
-      <Route path='backgroundChanger' element={<BackgroundChanger />} />
-      <Route path='passwordGenerator' element={<PasswordGenerator />} />
-      <Route path='currencyConverter' element={<CurrencyConverter />} />
-      <Route path='modeToggler' element={<ModeToggler />} />
+      <Route path='backgroundchanger' element={<BackgroundChanger />} />
+      <Route path='passwordgenerator' element={<PasswordGenerator />} />
+      <Route path='currencyconverter' element={<CurrencyConverter />} />
+      <Route path='modetoggler' element={<ModeToggler />} />
       <Route path='todo' element={<Todo />} />
       <Route path='weather' element={<Weather />} />
+      <Route path='rockpaperscissor' element={<RPS />} />
     </Route>
   )
 )

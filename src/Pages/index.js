@@ -6,3 +6,4 @@ export { ModeToggler } from "./Mode-Toggler";
 export { PasswordGenerator } from "./Password-Generator";
 export { Todo } from "./Todo";
 export { Weather } from "./Weather";
+export { RPS } from "./RPS"
